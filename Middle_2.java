@@ -8,20 +8,22 @@ public class Middle_2 {
         int n;
         double[] array;
         double maxAbs = 0;
-        do {
-            System.out.println("Введите элементы массива от 1 до 100: ");
-            n = scanner.nextInt();
-        } while (n < 1 || n > 100);
-        array = new double[n];
-        System.out.println("Введите значения массива: ");
-        for (int i = 0; i < n; i++) {
-            array[i] = scanner.nextDouble();
-        }
-        for (int i = 1; i < array.length; i++) {
-            if (Math.abs(array[i]) > maxAbs) {
-                maxAbs = Math.abs(array[i]);
+        System.out.println("Введите элементы массива от 1 до 100: ");
+        n = scanner.nextInt();
+        if (n > 100 || n < 1) {
+            System.out.println("Неверный ввод");
+        } else {
+            array = new double[n];
+            System.out.println("Введите значения массива: ");
+            for (int i = 0; i < n; i++) {
+                array[i] = scanner.nextDouble();
             }
+            for (int i = 1; i < array.length; i++) {
+                if (Math.abs(array[i]) > maxAbs) {
+                    maxAbs = Math.abs(array[i]);
+                }
+            }
+            System.out.println("Максимальное значени массива по модулю = " + maxAbs);
         }
-        System.out.println("Максимальное значени массива по модулю = " + maxAbs);
     }
 }
