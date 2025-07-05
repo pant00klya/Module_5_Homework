@@ -8,7 +8,7 @@ public class Middle_2 {
         int n;
         double[] array;
         double maxAbs = 0;
-        System.out.println("Введите элементы массива от 1 до 100: ");
+        System.out.println("Введите размер массива от 1 до 100: ");
         n = scanner.nextInt();
         if (n > 100 || n < 1) {
             System.out.println("Неверный ввод");
